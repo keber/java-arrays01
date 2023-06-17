@@ -11,24 +11,32 @@ import java.util.*;
  */
 public class Arrays01 {
 
+    public static String parImpar(Integer num){
+        return((num%2==0)?"par":"impar");
+    }
+
+    
     public static void main(String[] args) {
-        String [] myArray = new String[5];
-        myArray[0] = "Omar";
-        myArray[1] = "Hanz";
-        myArray[2] = "Diego";
-        myArray[3] = "Sofia";
-        myArray[4] = "Daniela";
+        Integer [] myArray = new Integer[5];
+        Scanner myScanner = new Scanner(System.in);
+        
         
         // for (String myArray1 : myArray) {
+        /*
         for(int i=0;i< myArray.length ; i++){
             System.out.println("posicion: " + i);
             System.out.println("Valor: " + myArray[i]);
         }
+        */
         
-        Integer [] myArray2 = { 5,6,7,8 };
-        for (int i = 0; i< myArray2.length; i++ ){
-            System.out.println("posicion: " + i);
-            System.out.println("Valor: " + myArray2[i]);
+        System.out.println("Hola, bienvenido! " );
+        for (int i = 0; i< myArray.length; i++ ){
+            System.out.println("Dame el valor del número: " + (i+1) );
+            myArray[i] = myScanner.nextInt();
+
+            System.out.println("El número en la posición " + i + " con el valor " + myArray[i] + " es " + parImpar(myArray[i]));
         }
+        
+        
     }
 }
